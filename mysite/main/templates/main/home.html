@@ -1,0 +1,15 @@
+{% extends 'main/header.html' %}
+
+  <div class="row">
+    {% for tut in wps %}
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-content">
+              <span class="card-title">{{tut.wps_title}}</span>
+              <p style="font-size:70%">Published {{tut.wps_published}}</p>
+              <p>{{tut.wps_content|safe}}</p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
